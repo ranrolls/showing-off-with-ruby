@@ -13,4 +13,6 @@ $(function(){
 
 # Showing off with Ruby #
 
-## Joel Chippindale ##
+## by Scott Chacon ##
+
+### forked from Joel Chippindale ###

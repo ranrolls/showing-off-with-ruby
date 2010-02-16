@@ -17,7 +17,7 @@ function setUpPechaKucha()
     // p for a pecha-kucha 20x20 talk http://www.pecha-kucha.org/
     if (key == 80)
     {
-      pechaKucha();
+      togglePechaKucha();
     }
   });
 }
@@ -27,20 +27,30 @@ function setUpPechaKucha()
 // Will go to the next slide every 20 seconds
 //
 // See http://www.pecha-kucha.org/ for more details
-function pechaKucha()
+var seconds = 0;
+var timerRunning = false;
+
+function togglePechaKucha()
 {
   if (!pechaKuchaRunning) {
     pechaKuchaRunning = true
     $("#pechaKuchaInfo").text(pechaKuchaStatus(0));
-    var seconds = 0;
-    setInterval(function() {
-      seconds++;
-      $("#pechaKuchaInfo").text(pechaKuchaStatus(seconds));
-      if (seconds == 20) {
-        seconds = 0;
-        nextStep();
-      }
-    }, 1000);
+    seconds = 0
+    if(!timerRunning) {
+      setInterval(function() {
+        timerRunning = true
+        if (!pechaKuchaRunning) { return; }
+        seconds++;
+        $("#pechaKuchaInfo").text(pechaKuchaStatus(seconds));
+        if (seconds == 20) {
+          seconds = 0;
+          nextStep();
+        }
+      }, 1000);
+    }
+  } else {
+    pechaKuchaRunning = false
+    $("#pechaKuchaInfo").text('')
   }
 }
 

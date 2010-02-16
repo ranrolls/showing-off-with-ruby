@@ -9,11 +9,11 @@ Image courtesy of <span xmlns:cc="http://creativecommons.org/ns#" about="http://
 
 # Links #
 
-This presentation - <http://github.com/mocoso/showing-off-with-ruby>
+This presentation - <http://github.com/schacon/showing-off-with-ruby>
+
+Original presentation - <http://github.com/mocoso/showing-off-with-ruby>
 
 Showoff - <http://github.com/schacon/showoff>
-
-Slidedown - <http://github.com/nakajima/slidedown>
 
 Plainview - <http://barbariangroup.com/software/plainview>
 
